@@ -1,0 +1,53 @@
+{
+  "tickets": {
+    "1759211374.720269": {
+      "originalChannel": "C09J879T4HF",
+      "originalTs": "1759211369.135359",
+      "ticketMessageTs": "1759211374.720269",
+      "claimers": [
+        "U07UK4S94KC",
+        "U05JNJZJ0BS"
+      ],
+      "notSure": [
+        "U07UK4S94KC"
+      ],
+      "AIQuickResponse": "I couldn't generate a response. Please try again or contact a staff member directly."
+    },
+    "1759211657.774409": {
+      "originalChannel": "C09J879T4HF",
+      "originalTs": "1759211653.579779",
+      "ticketMessageTs": "1759211657.774409",
+      "claimers": [],
+      "notSure": [],
+      "AIQuickResponse": "I couldn't generate a response. Please try again or contact a staff member directly."
+    },
+    "1759211703.795329": {
+      "originalChannel": "C09J879T4HF",
+      "originalTs": "1759211698.758009",
+      "ticketMessageTs": "1759211703.795329",
+      "claimers": [],
+      "notSure": [],
+      "AIQuickResponse": "I couldn't generate a response. Please try again or contact a staff member directly."
+    },
+    "1759211716.780399": {
+      "originalChannel": "C09J879T4HF",
+      "originalTs": "1759211712.521229",
+      "ticketMessageTs": "1759211716.780399",
+      "claimers": [],
+      "notSure": [],
+      "AIQuickResponse": "I couldn't generate a response. Please try again or contact a staff member directly."
+    }
+  },
+  "ticketsByOriginalTs": {
+    "1759211369.135359": "1759211374.720269",
+    "1759211653.579779": "1759211657.774409",
+    "1759211698.758009": "1759211703.795329",
+    "1759211712.521229": "1759211716.780399"
+  },
+  "lbForToday": [
+    {
+      "slack_id": "U07UK4S94KC",
+      "count_of_tickets": 1
+    }
+  ]
+}
