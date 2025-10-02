@@ -9,7 +9,7 @@ const detailsData = fs.readFileSync("lib/details.md").toString() // Added detail
 // Define channel IDs from env vars
 const HELP_CHANNEL = process.env.HELP_CHANNEL!;
 const TICKETS_CHANNEL = process.env.TICKETS_CHANNEL!;
-const DATA_FILE_PATH = path.join(__dirname, 'ticket-data.json');
+const DATA_FILE_PATH = path.join(__dirname, 'data', 'ticket-data.json');
 const AI_ENDPOINT = process.env.AI_ENDPOINT || 'error: AI_ENDPOINT not set';
 
 
