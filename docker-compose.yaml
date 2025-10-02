@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  slack-bot:
+    build: .
+    container_name: ticket-slack-bot
+    restart: unless-stopped
+    environment:
+      # Slack API Tokens
+      SLACK_BOT_TOKEN: ${SLACK_BOT_TOKEN}
+      SLACK_APP_TOKEN: ${SLACK_APP_TOKEN}
+      
+      # Channel IDs
+      HELP_CHANNEL: ${HELP_CHANNEL}
+      TICKETS_CHANNEL: ${TICKETS_CHANNEL}
+      
+      # AI and other optional settings
+      AI_ENDPOINT: ${AI_ENDPOINT:-""}
+      SLACK_WORKSPACE_DOMAIN: ${SLACK_WORKSPACE_DOMAIN:-"yourworkspace"}
+      
+      # Node environment
+      NODE_ENV: ${NODE_ENV:-production}
+    volumes:
+      # Persist ticket data
+      - ./data:/app/data
+      # Mount the ticket-data.json to persist state
+      - ./ticket-data.json:/app/ticket-data.json
+      # Mount the lib directory for FAQ and details
+      - ./lib:/app/lib:ro
+    networks:
+      - slack-bot-network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    # Health check (optional)
+    healthcheck:
+      test: ["CMD", "node", "-e", "process.exit(0)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+networks:
+  slack-bot-network:
+    driver: bridge
+
+volumes:
+  bot-data:
+    driver: local
